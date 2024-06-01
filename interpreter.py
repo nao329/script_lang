@@ -18,7 +18,7 @@ def evaluate(node, env):
     elif isinstance(node, String):
         return node.value
     elif isinstance(node, Variable):
-        env.set_var(node.name, node.value)
+        # env.set_var(node.name, node.value)
         return env.variables.get(node.name, None)
     elif isinstance(node, Assignment):
         value = evaluate(node.value, env)
